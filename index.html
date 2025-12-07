@@ -60,22 +60,72 @@ p{font-size:1.2em;max-width:700px;margin:auto;color:#ddd;}
 .discord-button:hover{transform:scale(1.12) translateY(-4px);box-shadow:0 10px 30px rgba(162, 77, 255, 0.8);}
 @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
 
+/* Частицы */
 .particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:-1;}
 .particle{position:absolute;width:5px;height:5px;background:#c778ff;border-radius:50%;opacity:0.7;animation:fly 6s linear infinite;}
 @keyframes fly{from{transform:translateY(100vh) scale(0.5);}to{transform:translateY(-10vh) scale(1.2);}}
 
+/* Неоновый футер с прозрачным фоном */
 footer{
-  text-align:center;color:#fff;padding:40px 20px 20px;
-  background:rgba(10,10,20,0.9);
-  transform:translateY(100%);
-  opacity:0;
-  transition:0.8s ease-out;
+  position: relative;
+  text-align:center;
+  padding:60px 20px 40px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.6);
 }
-footer.active{transform:translateY(0);opacity:1;}
-footer p{margin-bottom:15px;font-size:1.1em;}
-.footer-socials{display:flex;justify-content:center;gap:20px;font-size:1.5em;}
-.footer-socials i{cursor:pointer;transition:0.3s;color:#b967ff;}
-.footer-socials i:hover{color:#fff;transform:scale(1.2);}
+
+.footer-background{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  width:100%;
+  height:100%;
+  background-image: url('ukraine-map-transparent.png'); /* карта или флаг Украины */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.1;
+  z-index:0;
+}
+
+.footer-content{
+  position: relative;
+  z-index:1;
+}
+
+footer p{
+  font-size:1.2em;
+  margin-bottom:25px;
+  line-height:1.6em;
+  color:#fff;
+  text-shadow:
+    0 0 5px #0057b7,
+    0 0 10px #0057b7,
+    0 0 20px #ffd700,
+    0 0 30px #ffd700,
+    0 0 40px #ffd700;
+  font-weight:bold;
+}
+
+.footer-socials{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  font-size:1.7em;
+}
+.footer-socials a{
+  color:#b967ff;
+  transition:0.3s;
+}
+.footer-socials a:hover{
+  color:#fff;
+  transform:scale(1.3);
+  text-shadow:
+    0 0 5px #b967ff,
+    0 0 10px #c778ff,
+    0 0 15px #a24dff;
+}
 </style>
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -95,7 +145,6 @@ footer p{margin-bottom:15px;font-size:1.1em;}
     <li><a href="https://discord.gg/KsmPHDGcW" target="_blank">Discord</a></li>
     <li><a href="#">Контакти</a></li>
   </ul>
-  <!-- Украинский бантик -->
   <div class="ukr-ribbon"></div>
 </nav>
 
@@ -112,14 +161,20 @@ footer p{margin-bottom:15px;font-size:1.1em;}
   <a class="discord-button" href="https://discord.gg/KsmPHDGcW" target="_blank">Приєднатися</a>
 </div>
 
-<footer id="footer">
-  <p>Ми — українське ком'юніті Arc Raiders. Всіх українських гравців запрошуємо на наш сервер! 🎮</p>
-  <div class="footer-socials">
-    <i class="fab fa-twitch"></i>
-    <i class="fab fa-youtube"></i>
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-tiktok"></i>
-    <i class="fab fa-x-twitter"></i>
+<footer>
+  <div class="footer-background"></div>
+  <div class="footer-content">
+    <p>Вітаємо у нашому українському Discord-ком'юніті Arc Raiders! 🎮<br>
+    Ми об'єднуємо фанатів гри, створюємо турніри, гайди та події для геймерів.<br>
+    Приєднуйся до нас, щоб весело грати, обмінюватися досвідом та відкривати нові пригоди в Arc Raiders! 🚀</p>
+    <div class="footer-socials">
+      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitch"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://discord.gg/KsmPHDGcW" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    </div>
   </div>
 </footer>
 
@@ -134,18 +189,6 @@ for(let i=0;i<70;i++){
   p.style.opacity=0.5+Math.random()*0.5;
   particles.appendChild(p);
 }
-
-// Появление футера при скролле
-const footer = document.getElementById('footer');
-window.addEventListener('scroll', ()=>{
-  const scrollY = window.scrollY || window.pageYOffset;
-  const trigger = document.body.scrollHeight - window.innerHeight - 50;
-  if(scrollY > trigger){
-    footer.classList.add('active');
-  } else{
-    footer.classList.remove('active');
-  }
-});
 </script>
 
 </body>
