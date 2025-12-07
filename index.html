@@ -6,7 +6,7 @@
 <title>Arc Raiders Україна | Discord Ком'юніті</title>
 <meta name="description" content="Українське ком'юніті гри Arc Raiders. Приєднуйтесь до Discord-сервера, спілкуйтесь з українськими геймерами та фанатами Arc Raiders!">
 <meta name="keywords" content="Arc Raiders, Discord, Україна, українські геймери, ком'юніті, Arc Raiders UA">
-<meta name="google-site-verification" content="ВАШ_КОД_ОТ_GOOGLE"> <!-- Замените ВАШ_КОД_ОТ_GOOGLE на код из GSC -->
+<meta name="google-site-verification" content="ВАШ_КОД_ОТ_GOOGLE"> <!-- Замените на свой код Google Verification -->
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Arial',sans-serif;}
@@ -45,11 +45,11 @@ nav{
   align-items:center;
   z-index:10;
 }
-nav .logo{
-  font-size:1.5em;
-  font-weight:bold;
-  color:#b967ff;
-  text-shadow:0 0 12px #b967ff;
+nav .logo-video{
+  width:150px; /* ширина видео лого */
+  height:auto;
+  border-radius:8px;
+  object-fit:cover;
 }
 nav ul{
   display:flex;
@@ -174,7 +174,11 @@ footer{
 <div class="particles"></div>
 
 <nav>
-  <div class="logo">ARC RAIDERS UA</div>
+  <!-- Видео вместо лого -->
+  <video autoplay loop muted playsinline class="logo-video">
+    <source src="logo-video.mp4.mov" type="video/mp4">
+  </video>
+
   <ul>
     <li><a href="#">Головна</a></li>
     <li><a href="https://discord.gg/KsmPHDGcW" target="_blank">Discord</a></li>
