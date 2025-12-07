@@ -45,11 +45,11 @@ nav{
   align-items:center;
   z-index:10;
 }
-nav .logo-video{
-  width:150px; /* ширина видео лого */
-  height:auto;
-  border-radius:8px;
-  object-fit:cover;
+nav .logo-text{
+  font-size:1.5em;
+  font-weight:bold;
+  color:#b967ff;
+  text-shadow:0 0 12px #b967ff;
 }
 nav ul{
   display:flex;
@@ -67,7 +67,7 @@ nav ul li a:hover{
   text-shadow:0 0 8px #b967ff;
 }
 
-/* Центральна секція */
+/* Центральная секция */
 .container{
   margin-top:120px;
   text-align:center;
@@ -94,19 +94,20 @@ p{
   color:#ddd;
 }
 
-.banner{
-  width:90%;max-width:900px;
+/* Баннер/видео по центру */
+.video-banner{
+  width:90%;
+  max-width:600px;
   margin:25px auto;
   border-radius:15px;
   overflow:hidden;
-  animation:fadeIn 1.8s ease;
   box-shadow:0 0 25px rgba(162, 77, 255, 0.4);
 }
-.banner img{width:100%;display:block;}
-
-@keyframes fadeIn{
-  from{opacity:0;transform:scale(0.95);}
-  to{opacity:1;transform:scale(1);}
+.video-banner video{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:15px;
 }
 
 /* Кнопка Discord */
@@ -174,10 +175,8 @@ footer{
 <div class="particles"></div>
 
 <nav>
-  <!-- Видео вместо лого -->
-  <video autoplay loop muted playsinline class="logo-video">
-    <source src="logo-video.mp4.mov" type="video/mp4">
-  </video>
+  <!-- Текстовое лого -->
+  <div class="logo-text">Arc Raiders UA</div>
 
   <ul>
     <li><a href="#">Головна</a></li>
@@ -190,8 +189,11 @@ footer{
   <h1>Arc Raiders Україна</h1>
   <p>Українське Discord-ком'юніті для фанатів гри Arc Raiders. Спілкуйся, грай та приєднуйся до українських геймерів! Знайди новини, гайды та події по Arc Raiders.</p>
 
-  <div class="banner">
-    <img src="https://i.imgur.com/GktNUOS.jpeg" alt="Arc Raiders Banner">
+  <!-- Видео по центру -->
+  <div class="video-banner">
+    <video autoplay loop muted playsinline>
+      <source src="logo-video.mp4.mov" type="video/mp4">
+    </video>
   </div>
 
   <a class="discord-button" href="https://discord.gg/KsmPHDGcW" target="_blank">Приєднатися</a>
