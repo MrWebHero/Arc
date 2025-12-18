@@ -3,179 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Arc Raiders Україна | Discord Ком'юніті</title>
-<meta name="description" content="Українське ком'юніті гри Arc Raiders. Приєднуйтесь до Discord-сервера, спілкуйтесь з українськими геймерами та фанатами Arc Raiders!">
-<meta name="keywords" content="Arc Raiders, Discord, Україна, українські геймери, ком'юніті, Arc Raiders UA, геймплей, поради, новини">
+
+<meta name="description" content="Українське ком'юніті гри Arc Raiders. Приєднуйтесь до Discord-сервера.">
+<meta name="keywords" content="Arc Raiders, Discord, Україна, геймери">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph для соцсетей -->
-<meta property="og:title" content="Arc Raiders Україна | Discord Ком'юніті">
-<meta property="og:description" content="Українське ком'юніті гри Arc Raiders. Приєднуйтесь до Discord-сервера та спілкуйтесь з іншими українськими геймерами!">
-<meta property="og:image" content="back.JPG">
-<meta property="og:url" content="https://твій_сайт.ua">
-<meta property="og:type" content="website">
-
-<!-- Favicon -->
 <link rel="icon" href="fave.PNG" type="image/png">
 
-<!-- Font Awesome 6.5 для соц. іконок -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-o0JZP4N8b6cK0ZxFJz1q1d7Jv1POdlr3n0XZoK6V4m0Y7FZafcN5u1k0S+PhrfVtH6L14nXlQ9TSPrYuN5mYVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- JSON-LD Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Arc Raiders Україна",
-  "url": "https://твій_сайт.ua",
-  "sameAs": [
-    "https://discord.gg/KsmPHDGcW",
-    "https://www.reddit.com/r/Arcraidersukraine/s/o8GnaZ1GAm"
-  ],
-  "logo": "https://твій_сайт.ua/fave.PNG",
-  "description": "Українське ком'юніті гри Arc Raiders. Спілкуйтесь з українськими геймерами та фанатами Arc Raiders!"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Arc Raiders Україна",
-  "url": "https://твій_сайт.ua",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://твій_сайт.ua/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Arc Raiders UA Відео",
-  "description": "Відео логотипу та промо українського ком'юніті Arc Raiders.",
-  "thumbnailUrl": "back.JPG",
-  "uploadDate": "2025-12-18",
-  "contentUrl": "https://твій_сайт.ua/logo-video.mp4",
-  "embedUrl": "https://твій_сайт.ua/logo-video.mp4",
-  "duration": "PT0M20S"
-}
-</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Arial',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 body{background:#0a0a14;color:#fff;overflow-x:hidden;}
-.stars, .stars2, .stars3{position:fixed;top:0;left:0;width:100%;height:100%;background-repeat:repeat;background-size:contain;z-index:-1;}
-.stars{background-image:url('https://www.transparenttextures.com/patterns/stardust.png');animation:move1 30s linear infinite;}
-.stars2{background-image:url('https://www.transparenttextures.com/patterns/stardust.png');animation:move2 60s linear infinite;opacity:0.6;}
-.stars3{background-image:url('https://www.transparenttextures.com/patterns/stardust.png');animation:move3 90s linear infinite;opacity:0.3;}
-@keyframes move1{from{background-position:0 0;}to{background-position:1000px 1000px;}}
-@keyframes move2{from{background-position:0 0;}to{background-position:-1000px 1000px;}}
-@keyframes move3{from{background-position:0 0;}to{background-position:1000px -1000px;}}
+
+.stars,.stars2,.stars3{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background-image:url('https://www.transparenttextures.com/patterns/stardust.png');
+z-index:-1;
+}
+.stars{animation:move1 30s linear infinite;}
+.stars2{animation:move2 60s linear infinite;opacity:.6;}
+.stars3{animation:move3 90s linear infinite;opacity:.3;}
+
+@keyframes move1{to{background-position:1000px 1000px}}
+@keyframes move2{to{background-position:-1000px 1000px}}
+@keyframes move3{to{background-position:1000px -1000px}}
 
 nav{
-  width:100%;padding:15px 20px;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);
-  position:fixed;top:0;left:0;display:flex;justify-content:space-between;align-items:center;z-index:10;
+position:fixed;top:0;left:0;width:100%;
+padding:15px 20px;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(8px);
+z-index:10;
 }
-nav .logo-text{font-size:1.5em;font-weight:bold;color:#b967ff;text-shadow:0 0 12px #b967ff;}
+.logo-text{font-size:1.5em;font-weight:bold;color:#b967ff;}
 nav ul{display:flex;gap:25px;list-style:none;}
-nav ul li a{color:#fff;text-decoration:none;font-size:1em;transition:0.2s;}
-nav ul li a:hover{color:#b967ff;text-shadow:0 0 8px #b967ff;}
-
-.ukr-ribbon {
-  position: absolute;
-  top:10px;
-  right:20px;
-  width:40px;
-  height:25px;
-  background: linear-gradient(90deg, #0057b7 50%, #ffd700 50%);
-  border-radius:4px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
+nav a{color:#fff;text-decoration:none}
 
 .container{
-  margin-top:120px;text-align:center;padding:20px;
+margin-top:120px;
+padding:20px;
+text-align:center;
 }
-h1{font-size:3em;margin-bottom:10px;color:#fff;text-shadow:0 0 15px #a24dff,0 0 30px #a24dff;animation:neonPulse 2.8s infinite;}
-@keyframes neonPulse{0%{text-shadow:0 0 10px #a24dff;}50%{text-shadow:0 0 25px #c778ff;}100%{text-shadow:0 0 10px #a24dff;}}
-h2{font-size:2em;margin-top:40px;color:#fff;text-shadow:0 0 10px #c778ff;}
-h3{font-size:1.5em;margin-top:25px;color:#fff;text-shadow:0 0 8px #c778ff;}
-p{font-size:1.2em;max-width:700px;margin:auto;color:#ddd;line-height:1.6em;}
 
+h1{
+font-size:3em;
+text-shadow:0 0 20px #a24dff;
+margin-bottom:15px;
+}
+
+p{
+max-width:700px;
+margin:15px auto;
+font-size:1.2em;
+color:#ddd;
+}
+
+/* ===== ВИДЕОБАННЕР ===== */
 .video-banner{
-  width:90%;max-width:600px;margin:25px auto;border-radius:15px;overflow:hidden;box-shadow:0 0 25px rgba(162, 77, 255, 0.4);
+width:90%;
+max-width:600px;
+margin:30px auto;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 0 25px rgba(162,77,255,.4);
 }
 .video-banner video{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:15px;
-  <div class="video-banner">
-    <video autoplay muted loop playsinline>
-        <source src="logo-video.mp4.mov" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+width:100%;
+height:auto;
+display:block;
 }
 
+/* ===== КНОПКА ===== */
 .discord-button{
-  padding:17px 55px;background:linear-gradient(90deg,#a65bff,#8e3dff);color:#fff;border:none;border-radius:15px;
-  font-size:1.4em;font-weight:bold;text-decoration:none;cursor:pointer;display:inline-block;margin-top:15px;transition:0.25s;
-  animation:pulse 2s infinite;box-shadow:0 5px 20px rgba(0,0,0,0.4);
+display:inline-block;
+margin-top:25px;
+padding:17px 55px;
+font-size:1.4em;
+font-weight:bold;
+color:#fff;
+background:linear-gradient(90deg,#a65bff,#8e3dff);
+border-radius:15px;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,.4);
+transition:.25s;
 }
-.discord-button:hover{transform:scale(1.12) translateY(-4px);box-shadow:0 10px 30px rgba(162, 77, 255,0.8);}
-@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.05);}}
+.discord-button:hover{
+transform:scale(1.1);
+}
 
-/* Частицы */
-.particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:-1;}
-.particle{position:absolute;width:5px;height:5px;background:#c778ff;border-radius:50%;opacity:0.7;animation:fly 6s linear infinite;will-change:transform;}
-@keyframes fly{from{transform:translateY(100vh) scale(0.5);}to{transform:translateY(-10vh) scale(1.2);}}
-
-/* Футер */
+/* ===== ФУТЕР ===== */
 footer{
-  position: relative;
-  text-align:center;
-  padding:60px 20px 40px;
-  overflow: hidden;
-  background: rgba(0,0,0,0.6);
-}
-.footer-background{
-  position: absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  background-image: url('back.JPG'); 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity:0.5;
-  z-index:0;
-}
-.footer-content{position: relative; z-index:1;}
-footer p{
-  font-size:1.2em;
-  margin-bottom:25px;
-  line-height:1.6em;
-  color:#ff7f00;
-  text-shadow:0 0 5px #ff7f00,0 0 10px #ff9900,0 0 20px #ff6600,0 0 30px #ff7f00,0 0 40px #ff9900;
-  font-weight:bold;
+margin-top:80px;
+padding:50px 20px;
+background:rgba(0,0,0,.6);
+text-align:center;
 }
 .footer-socials{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  font-size:1.7em;
+display:flex;
+justify-content:center;
+gap:25px;
+font-size:1.6em;
 }
-.footer-socials a{
-  color:#ff7f00;
-  transition:0.3s;
-}
-.footer-socials a:hover{
-  transform:scale(1.4);
-  text-shadow:0 0 5px #ff7f00,0 0 10px #ffcc33,0 0 20px #ff9933,0 0 30px #ff6600;
-}
+.footer-socials a{color:#ff7f00}
 </style>
 </head>
 
@@ -184,74 +117,41 @@ footer p{
 <div class="stars"></div>
 <div class="stars2"></div>
 <div class="stars3"></div>
-<div class="particles"></div>
 
 <nav>
   <div class="logo-text">Arc Raiders UA</div>
   <ul>
     <li><a href="#">Головна</a></li>
     <li><a href="https://discord.gg/KsmPHDGcW" target="_blank">Discord</a></li>
-    <li><a href="#">Контакти</a></li>
   </ul>
-  <div class="ukr-ribbon"></div>
 </nav>
 
 <div class="container">
   <h1>Arc Raiders Україна</h1>
-  <p>Ласкаво просимо до нашого українського Discord-ком'юніті для фанатів Arc Raiders! Спілкуйтесь з іншими українськими геймерами, діліться гайдами та новинами, беріть участь у подіях та турнірах. Разом буде весело!</p>
 
-  <h2>Про гру Arc Raiders</h2>
-  <p>Arc Raiders — це популярна PvPvE гра, де гравці виступають рейдерами у постапокаліптичному світі, борються з механічними ворогами та іншими гравцями, щоб вижити і здобути ресурси. Українське ком’юніті активно обговорює стратегії, механіки гри та організовує спільні рейди.</p>
+  <p>Українське Discord-ком'юніті гри Arc Raiders.</p>
 
-  <h2>Наше українське ком'юніті</h2>
-  <p>Discord-сервер об’єднує українських геймерів, які обмінюються порадами, гайдами, мемами та новинами про Arc Raiders. Тут можна знайти друзів для спільних ігор, отримати допомогу або поділитися власним досвідом.</p>
-
-  <h3>Що обговорюють учасники:</h3>
-  <ul style="list-style:disc; margin-left:20px; color:#ddd; text-align:left; max-width:700px; margin:auto;">
-    <li>Ігрові стратегії та PvP/PvE поради</li>
-    <li>Оновлення гри та нові механіки</li>
-    <li>Організація рейдів та спільних подій</li>
-    <li>Проблеми з локалізацією та побажання українською мовою</li>
-  </ul>
-
+  <!-- ВИДЕО В ТВОЁМ БЛОКЕ -->
   <div class="video-banner">
     <video autoplay muted loop playsinline>
-      <source src="logo-video.mp4" type="video/mp4">
+      <source src="logo-video.mp4.mov" type="video/mp4">
       Ваш браузер не підтримує відео.
     </video>
   </div>
 
-  <a class="discord-button" href="https://discord.gg/KsmPHDGcW" target="_blank">Приєднатися</a>
+  <a class="discord-button" href="https://discord.gg/KsmPHDGcW" target="_blank">
+    Приєднатися
+  </a>
 </div>
 
 <footer>
-  <div class="footer-background"></div>
-  <div class="footer-content">
-    <p>Приєднуйтесь до нашого ком’юніті і будьте частиною українських фанів Arc Raiders!</p>
-    <div class="footer-socials">
-      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitch"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://discord.gg/KsmPHDGcW" target="_blank"><i class="fab fa-discord"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.reddit.com/r/Arcraidersukraine/s/o8GnaZ1GAm" target="_blank" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
-    </div>
+  <p>Будь частиною українського Arc Raiders ком'юніті</p>
+  <div class="footer-socials">
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="https://discord.gg/KsmPHDGcW"><i class="fab fa-discord"></i></a>
   </div>
 </footer>
-
-<script>
-// Частицы
-const particles = document.querySelector('.particles');
-for(let i=0;i<50;i++){
-  const p=document.createElement('div');
-  p.classList.add('particle');
-  p.style.left=Math.random()*100+'vw';
-  p.style.animationDuration=(4+Math.random()*4)+'s';
-  p.style.opacity=0.5+Math.random()*0.5;
-  particles.appendChild(p);
-}
-</script>
 
 </body>
 </html>
